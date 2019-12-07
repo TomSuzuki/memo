@@ -1,7 +1,10 @@
 # Memo
 Auto save text editor.
 
-## How to use?
+## How to use
 Link: https://tomsuzuki.github.io/memo/  
 Saving is done automatically.  
 This editor use cookie. When cookies disappear, everything disappears.
+
+## Update
+2019/12/06 version 1.00  
