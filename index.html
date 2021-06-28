@@ -4,15 +4,14 @@
 <head>
     <title>Memo</title>
     <script>
-        function getCookie(key) {
-            for (let c of document.cookie.split(';')) {
-                let cArray = c.split('=');
-                if (cArray[0].trim() == key) return cArray[1];
-            }
-        }
         window.onload = () => {
             let e = document.getElementById("area");
-            e.textContent = decodeURIComponent(getCookie("memo"));
+            e.textContent = decodeURIComponent(function (key) {
+                for (let c of document.cookie.split(';')) {
+                    let cArray = c.split('=');
+                    if (cArray[0].trim() == key) return cArray[1];
+                }
+            }("memo"));
             e.addEventListener('input', () => document.cookie = `memo=${encodeURIComponent(e.value)}`);
         };
     </script>
